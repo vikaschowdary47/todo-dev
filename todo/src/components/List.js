@@ -18,7 +18,7 @@ const List = () => {
             {check ? (
               <del>can a list be here in label</del>
             ) : (
-              <p> can a list be here in label</p>
+              <p>can a list be here in label</p>
             )}
           </p>
         }

@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Main = ({ name }) => {
+const Main = ({ addList }) => {
   const classes = useStyles();
   const [selectedTab, setSelectedTab] = React.useState(0);
 
