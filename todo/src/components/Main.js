@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Paper, Tabs, Tab } from "@material-ui/core";
-import Header from "./Header";
+import Add from "./Add";
 
 const useStyles = makeStyles({
   root: {
@@ -11,17 +11,16 @@ const useStyles = makeStyles({
 
 const Main = ({ name }) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [selectedTab, setSelectedTab] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setSelectedTab(newValue);
   };
 
   return (
     <div style={{ width: "50%", margin: "auto" }}>
-      {/* <Paper square className={classes.root}> */}
       <Tabs
-        value={value}
+        value={selectedTab}
         onChange={handleChange}
         indicatorColor="primary"
         textColor="primary"
@@ -32,7 +31,8 @@ const Main = ({ name }) => {
         <Tab label="Active" />
         <Tab label="Completed" />
       </Tabs>
-      {/* </Paper> */}
+      {selectedTab === 0 && <Add />}
+      {selectedTab === 1 && <Add />}
     </div>
   );
 };
