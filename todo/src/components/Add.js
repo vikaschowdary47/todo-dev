@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TextField, Button } from "@material-ui/core";
 import List from "./List";
+import { ToDoListContext } from "../ToDoListContext";
 
 const Add = () => {
   const [add, setAdd] = React.useState("");
-  const [addList, setAddList] = React.useState("");
+  const [doList, setDoList] = React.useState("");
+
+  const [toDoList, setToDoList] = useContext(ToDoListContext);
+
+  console.log(toDoList);
   return (
     <div
       style={{
@@ -15,9 +20,10 @@ const Add = () => {
         // value={addList}
         onSubmit={(e) => {
           e.preventDefault();
-          setAddList(add);
+          setDoList(add);
+          toDoList.push(add);
           setAdd("");
-          console.log(addList);
+          console.log(doList);
         }}
       >
         <TextField
@@ -36,7 +42,7 @@ const Add = () => {
           Add
         </Button>
       </form>
-      <List item={addList} />
+      {/* <List item={doList} /> */}
     </div>
   );
 };
