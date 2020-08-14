@@ -1,7 +1,8 @@
 import React from "react";
 import { TextField, Button } from "@material-ui/core";
+import List from "./List";
 
-const Add = ({ addList }) => {
+const Add = () => {
   const [add, setAdd] = React.useState("");
   const [addList, setAddList] = React.useState("");
   return (
@@ -11,7 +12,7 @@ const Add = ({ addList }) => {
       }}
     >
       <form
-        value={addList}
+        // value={addList}
         onSubmit={(e) => {
           e.preventDefault();
           setAddList(add);
@@ -35,6 +36,7 @@ const Add = ({ addList }) => {
           Add
         </Button>
       </form>
+      <List item={addList} />
     </div>
   );
 };
