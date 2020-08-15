@@ -2,6 +2,7 @@ import React from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 import { Tabs, Tab } from "@material-ui/core";
 import Add from "./Add";
+import Completed from "./Completed";
 // import List from "./List";
 
 // const useStyles = makeStyles({
@@ -36,13 +37,9 @@ const Main = () => {
         <Tab label="Active" />
         <Tab label="Completed" />
       </Tabs>
-      {selectedTab === 0 && (
-        <>
-          <Add />
-          {/* <List /> */}
-        </>
-      )}
+      {selectedTab === 0 && <Add />}
       {selectedTab === 1 && <Add />}
+      {selectedTab === 2 && <Completed />}
     </div>
   );
 };
