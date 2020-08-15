@@ -1,8 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import { Tabs, Tab } from "@material-ui/core";
 import Add from "./Add";
-import List from "./List";
+// import List from "./List";
 
 // const useStyles = makeStyles({
 //   root: {
@@ -39,7 +39,7 @@ const Main = () => {
       {selectedTab === 0 && (
         <>
           <Add />
-          <List />
+          {/* <List /> */}
         </>
       )}
       {selectedTab === 1 && <Add />}

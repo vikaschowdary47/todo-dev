@@ -9,7 +9,7 @@ const Add = () => {
 
   const [toDoList, setToDoList] = useContext(ToDoListContext);
 
-  console.log(toDoList);
+  // console.log(toDoList);
   return (
     <div
       style={{
@@ -23,7 +23,7 @@ const Add = () => {
           setDoList(add);
           toDoList.push(add);
           setAdd("");
-          console.log(doList);
+          // console.log(doList);
         }}
       >
         <TextField
@@ -31,6 +31,7 @@ const Add = () => {
           id="outlined-basic"
           label="Add details"
           variant="outlined"
+          type="text"
           value={add}
           onChange={(e) => {
             setAdd(e.target.value);
@@ -42,7 +43,7 @@ const Add = () => {
           Add
         </Button>
       </form>
-      {/* <List item={doList} /> */}
+      <List />
     </div>
   );
 };

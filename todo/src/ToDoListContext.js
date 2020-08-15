@@ -4,10 +4,10 @@ export const ToDoListContext = createContext();
 
 export const ToDoProvider = (props) => {
   const [toDoList, setToDoList] = useState([
-    "study",
-    "chores",
-    "clean house",
-    "gym",
+    { task: "study", id: 1 },
+    { task: "chores", id: 2 },
+    { task: "clean house", id: 3 },
+    { task: "gym", id: 4 },
   ]);
 
   return (
