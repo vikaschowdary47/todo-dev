@@ -1,0 +1,21 @@
+.main {
+  width: 95%;
+  margin: auto;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.image__body {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+}
+.room__images {
+  /* object-fit: contain; */
+  width: 420px;
+  height: 370px;
+  border-radius: 30px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
